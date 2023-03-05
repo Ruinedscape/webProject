@@ -1,0 +1,24 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css')
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
+		script(src="javascripts/index.js")
+	
+	body
+	include menu
+
+	block content
+		h1 Code Wall
+		p Click on the titles of the posts to show comments
+		p You may need to refresh the page in order to show new posts
+
+		h3 Add a new post
+		form(id="postForm")
+			input(type="text" placeholder="Title" id="title")
+			input(type="text" placeholder="Code snippet" id="code")
+			button(id="submit" type="submit") Submit
+
+		div(id="container")
